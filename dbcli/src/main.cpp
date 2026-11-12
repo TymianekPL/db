@@ -1,6 +1,3 @@
-#include <hello.h>
+import Hello;
 
-int main(void)
-{
-     SayHi();
-}
+int main(void) { SayHi(); }

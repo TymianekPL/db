@@ -1,5 +1,8 @@
-#include "hello.h"
-#include <print>
+module;
 #include <chrono>
+#include <print>
+export module Hello;
 
-void SayHi(void) { std::println("hi {}!", std::chrono::system_clock::now()); }
+import :Arithmetic;
+
+export void SayHi(void) { std::println("hi {}!!", CurrentTime()); }
