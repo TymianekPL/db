@@ -1,8 +1,10 @@
-module;
-#include <chrono>
-#include <print>
-export module Hello;
+module Hello;
 
-import :Arithmetic;
+import std;
+import :Impl;
 
-export void SayHi(void) { std::println("hi {}!!", CurrentTime()); }
+void SayHi(void)
+{
+     const auto time = CurrentTime();
+     std::println("it is {}!", time);
+}

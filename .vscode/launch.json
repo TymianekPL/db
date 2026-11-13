@@ -1,0 +1,44 @@
+{
+     "version": "0.2.0",
+     "configurations": [
+          {
+               "name": "Debug CMake target",
+               "type": "cppdbg",
+               "request": "launch",
+               "program": "${command:cmake.launchTargetPath}",
+               "cwd": "${workspaceFolder}",
+               "MIMode": "gdb",
+               "miDebuggerPath": "/usr/bin/gdb",
+               "args": [],
+               "stopAtEntry": false,
+               "externalConsole": false,
+               "setupCommands": [
+                    {
+                         "description": "Enable pretty-printing for gdb",
+                         "text": "-enable-pretty-printing",
+                         "ignoreFailures": true
+                    },
+                    {
+                         "description": "Set Disassembly Flavor to Intel",
+                         "text": "-gdb-set disassembly-flavor intel",
+                         "ignoreFailures": true
+                    },
+                    {
+                         "description": "Remove container truncation limits",
+                         "text": "-gdb-set print elements 0",
+                         "ignoreFailures": true
+                    },
+                    {
+                         "description": "Skip standard library headers when stepping",
+                         "text": "-interpreter-exec console \"skip -gfi /usr/include/c++/*/*/*\"",
+                         "ignoreFailures": true
+                    },
+                    {
+                         "description": "Print structs and arrays cleanly",
+                         "text": "-gdb-set print pretty on",
+                         "ignoreFailures": true
+                    }
+               ]
+          }
+     ]
+}

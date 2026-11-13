@@ -1,0 +1,38 @@
+---
+Language: Cpp
+BasedOnStyle: Microsoft
+ReferenceAlignment: Left
+PointerAlignment: Left
+QualifierAlignment: Left
+BreakBeforeBraces: Allman
+SpaceAfterTemplateKeyword: true
+IndentWidth: 5
+TabWidth: 5
+UseTab: Never
+AccessModifierOffset: -5
+NamespaceIndentation: All
+IndentRequires: true
+ContinuationIndentWidth: 5
+AllowShortEnumsOnASingleLine: true
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: None
+AllowShortLambdasOnASingleLine: None
+AllowShortBlocksOnASingleLine: Never
+AllowShortIfStatementsOnASingleLine: Always
+AllowShortLoopsOnASingleLine: true
+IncludeCategories:
+    # Headers in <> with .h extension.
+    - Regex: '<([A-Za-z0-9\/-_])+\.h>'
+      Priority: 10
+    # Headers in <> with .hpp extension.
+    - Regex: '<([A-Za-z0-9\/-_])+\.hpp>'
+      Priority: 20
+    # Headers in <> without extension.
+    - Regex: '<([A-Za-z0-9\/-_])+>'
+      Priority: 30
+
+Cpp11BracedListStyle: true
+SpaceBeforeParens: ControlStatements
+BreakBeforeTernaryOperators: true
+AlignOperands: Align
+ColumnLimit: 120

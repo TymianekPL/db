@@ -1,0 +1,13 @@
+CompileFlags:
+  Add: [-Wall, -Wextra, -Wpedantic]
+  Remove: [-fmodules-ts, -fmodule-mapper=*]
+
+Diagnostics:
+  UnusedIncludes: None
+  MissingIncludes: None
+
+InlayHints:
+  Enabled: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+  Designators: Yes
